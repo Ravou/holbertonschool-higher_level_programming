@@ -1,0 +1,36 @@
+"""
+Tests for text_indentation
+"""
+
+text_indentation = __import__('5-text_indentation').text_indentation
+
+### --- Test simple avec un point --- ###
+>>> text_indentation("Hello. How are you?")
+Hello.
+
+ How are you?
+
+### --- Test avec des doubles ponctuations --- ###
+>>> text_indentation("Wait: really? Yes.")
+Wait:
+
+ really?
+
+ Yes.
+
+### --- Test avec des espaces après la ponctuation --- ###
+>>> text_indentation("This is fine.  That too:  okay?")
+This is fine.
+
+That too:
+
+okay?
+
+### --- Test avec ponctuation à la fin --- ###
+>>> text_indentation("Done.")
+Done.
+
+### --- Test avec mauvais type --- ###
+>>> text_indentation(123)
+Traceback (most recent call last):
+TypeError: text must be a string
