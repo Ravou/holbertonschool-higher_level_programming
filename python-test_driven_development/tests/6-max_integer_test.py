@@ -36,3 +36,4 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([1, 2.5, 3, 2]), 3)
 
     def test_string_list(self):
+        self.assertEqual(max_integer(["a", "z", "m"]), "z")
