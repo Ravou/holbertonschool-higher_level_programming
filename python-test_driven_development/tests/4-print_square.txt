@@ -1,0 +1,46 @@
+"""
+Tests for print_square
+"""
+
+print_square = __import__('4-print_square').print_square
+
+### --- Test 1: taille 0 --- ###
+>>> print_square(0)
+
+### --- Test 2: taille 1 --- ###
+>>> print_square(1)
+#
+
+### --- Test 3: taille 3 --- ###
+>>> print_square(3)
+###
+###
+###
+
+### --- Test 4: taille 5 --- ###
+>>> print_square(5)
+#####
+#####
+#####
+#####
+#####
+
+### --- Test 5: size négatif --- ###
+>>> print_square(-4)
+Traceback (most recent call last):
+ValueError: size must be >= 0
+
+### --- Test 6: size float positif --- ###
+>>> print_square(3.5)
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+### --- Test 7: size float négatif --- ###
+>>> print_square(-1.5)
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+### --- Test 8: size n’est pas un nombre --- ###
+>>> print_square("5")
+Traceback (most recent call last):
+TypeError: size must be an integer
