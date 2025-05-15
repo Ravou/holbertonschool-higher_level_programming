@@ -1,0 +1,36 @@
+"""
+Tests for say_my_name
+"""
+
+say_my_name = __import__('3-say_my_name').say_my_name
+
+### --- Test 1: Nom complet --- ###
+>>> say_my_name("John", "Smith")
+My name is John Smith
+
+### --- Test 2: Nom sans nom de famille --- ###
+>>> say_my_name("Alice")
+My name is Alice 
+
+### --- Test 3: last_name vide --- ###
+>>> say_my_name("Marie", "")
+My name is Marie 
+
+### --- Test 4: first_name non str --- ###
+>>> say_my_name(123, "Smith")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+### --- Test 5: last_name non str --- ###
+>>> say_my_name("Marie", 42)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+### --- Test 6: Chaînes avec des espaces --- ###
+>>> say_my_name("  Jane", "Doe  ")
+My name is   Jane Doe  
+
+### --- Test 7: Unicode --- ###
+>>> say_my_name("Zoë", "Brontë")
+My name is Zoë Brontë
+
