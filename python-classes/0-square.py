@@ -4,4 +4,3 @@
 class Square:
     """Class that represents a geometric square."""
     pass
-
