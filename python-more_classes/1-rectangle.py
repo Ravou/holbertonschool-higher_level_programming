@@ -4,7 +4,7 @@
 class Rectangle:
     """Class that defines a rectangle by width and height."""
 
-    def __init(self, with=0, height=0):
+    def __init(self, width=0, height=0):
         """Initialize rectangle with optional width and height."""
         self.witdh = width
         self.height = height
@@ -15,7 +15,7 @@ class Rectangle:
 
     def width(self, value):
         """Setter for width with validation"""
-        if not isincatnce(value, int):
+        if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
@@ -23,7 +23,7 @@ class Rectangle:
 
     def height(self):
         """Getter for height"""
-        return self.__heigt
+        return self.__height
 
     def height(self, value):
         """Setter for height with validation"""
