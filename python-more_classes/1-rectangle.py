@@ -1,18 +1,20 @@
-#!/usur/bin/python3
+#!/usr/bin/python3
 """Defines a Rectangle class with width and height"""
 
 class Rectangle:
     """Class that defines a rectangle by width and height."""
 
-    def __init(self, width=0, height=0):
+    def __init__(self, width=0, height=0):
         """Initialize rectangle with optional width and height."""
-        self.witdh = width
+        self.width = width
         self.height = height
 
+    @property
     def width(self):
         """Getter for width"""
         return self.width
 
+    @width.setter
     def width(self, value):
         """Setter for width with validation"""
         if not isinstance(value, int):
@@ -21,10 +23,12 @@ class Rectangle:
             raise ValueError("width must be >= 0")
         self.__width = value
 
+    @property
     def height(self):
         """Getter for height"""
         return self.__height
 
+    @height.setter
     def height(self, value):
         """Setter for height with validation"""
         if not isinstance(value, int):
