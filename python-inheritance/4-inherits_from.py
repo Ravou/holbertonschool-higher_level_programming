@@ -1,6 +1,15 @@
 #!/usr/bin/python3
-""" Use this for execute the function """
+"""Module that defines a function to check if an object inherits from a class."""
 
 def inherits_from(obj, a_class):
-    """ check if the object is an instance or not """
+    """
+    Check if the object is an instance of a class that inherited (directly or indirectly) from the specified class.
+
+    Args:
+        obj: The object to check.
+        a_class: The class to compare against.
+
+    Returns:
+        True if obj is an instance of a subclass of a_class; otherwise False.
+    """
     return (obj, a_class) and type(obj) is not a_class
