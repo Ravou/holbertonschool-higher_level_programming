@@ -5,4 +5,3 @@ class MyList(list):
     def print_sorted(self):
         """Prints the list in acsending order (without modifying the original list). """
         print(sorted(self))
-        """ this command can show the list """
