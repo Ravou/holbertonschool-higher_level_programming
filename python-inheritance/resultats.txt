@@ -1,0 +1,142 @@
+Trying:
+    BaseGeometry = __import__('7-base_geometry').BaseGeometry
+Expecting nothing
+ok
+Trying:
+    bg = BaseGeometry()
+Expecting nothing
+ok
+Trying:
+    type(bg)
+Expecting:
+    <class '7-base_geometry.BaseGeometry'>
+ok
+Trying:
+    bg = BaseGeometry()
+Expecting nothing
+ok
+Trying:
+    try:
+        bg.area()
+    except Exception as e:
+        print(e)
+Expecting:
+    area() is not implemented
+ok
+Trying:
+    bg = BaseGeometry()
+Expecting nothing
+ok
+Trying:
+    bg.integer_validator("my_int", 12)
+Expecting nothing
+ok
+Trying:
+    bg.integer_validator("width", 89)
+Expecting nothing
+ok
+Trying:
+    bg.integer_validator("height", 100)
+Expecting nothing
+ok
+Trying:
+    try:
+        bg.integer_validator("age", 0)
+    except Exception as e:
+        print(e)
+Expecting:
+    age must be greater than 0
+ok
+Trying:
+    try:
+        bg.integer_validator("distance", -4)
+    except Exception as e:
+        print(e)
+Expecting:
+    distance must be greater than 0
+ok
+Trying:
+    try:
+        bg.integer_validator("name", "John")
+    except Exception as e:
+        print(e)
+Expecting:
+    name must be an integer
+ok
+Trying:
+    try:
+        bg.integer_validator("value", None)
+    except Exception as e:
+        print(e)
+Expecting:
+    value must be an integer
+ok
+Trying:
+    try:
+        bg.integer_validator("valid", True)
+    except Exception as e:
+        print(e)
+Expecting:
+    valid must be an integer
+ok
+Trying:
+    try:
+        bg.integer_validator("values", [1, 2, 3])
+    except Exception as e:
+        print(e)
+Expecting:
+    values must be an integer
+ok
+Trying:
+    try:
+        bg.integer_validator("position", (1, 2))
+    except Exception as e:
+        print(e)
+Expecting:
+    position must be an integer
+ok
+Trying:
+    try:
+        bg.integer_validator("user", {"id": 1, "name": "John"})
+    except Exception as e:
+        print(e)
+Expecting:
+    user must be an integer
+ok
+Trying:
+    try:
+        bg.integer_validator("numbers", {1, 2, 3})
+    except Exception as e:
+        print(e)
+Expecting:
+    numbers must be an integer
+ok
+Trying:
+    try:
+        bg.integer_validator("average", 7.8)
+    except Exception as e:
+        print(e)
+Expecting:
+    average must be an integer
+ok
+Trying:
+    try:
+        bg.integer_validator()
+    except Exception as e:
+        print("Exception raised")
+Expecting:
+    Exception raised
+ok
+Trying:
+    try:
+        bg.integer_validator("age")
+    except Exception as e:
+        print("Exception raised")
+Expecting:
+    Exception raised
+ok
+1 items passed all tests:
+  21 tests in 7-base_geometry.txt
+21 tests in 1 items.
+21 passed and 0 failed.
+Test passed.
