@@ -1,4 +1,4 @@
-#!/usr/bin/pyhton3
+#!/usr/bin/python3
 """ Module that defines a base geometry class with validation methods.
 
 This module contains:
