@@ -1,4 +1,4 @@
-#!/usr/bin/!
+#!/usr/bin/python3
 """ Use the program for execute for this script """
 
 
