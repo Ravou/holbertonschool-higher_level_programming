@@ -43,6 +43,7 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
             self.send_header("Content-Type", "text/plain")
             self.end_headers()
             self.wfile.write(b"OK")
+            message = {"status": "OK"}
             self.wfile.write(json.dumps(message).encode("utf-8"))
 
         else:
