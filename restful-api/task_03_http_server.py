@@ -41,7 +41,7 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
             self.send_header("Content-type", "application/json")
             self.end_headers()
             message = {"error": "Endpoint not found"}
-            self.wfile.write(json.dumps(message).encode("utf-8")
+            self.wfile.write(json.dumps(message).encode("utf-8"))
 
 
 def run(server_class=HTTPServer, handler_class=SimpleHTTPRequestHandler, port=8000):
