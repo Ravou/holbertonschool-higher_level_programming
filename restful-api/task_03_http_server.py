@@ -19,26 +19,26 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
         """Handle GET requests."""
         if self.path == "/":
             self.send_response(200)
-            self.send_header("Content-type", "text/plain")
+            self.send_header("Content-Type", "text/plain")
             self.end_headers()
             self.wfile.write(b"Hello, this is a simple API!\n")
 
         elif self.path == "/data":
             data = {"name": "John", "age": 30, "city": "New York"}
             self.send_response(200)
-            self.send_header("Content-type", "application/json")
+            self.send_header("Content-Type", "application/json")
             self.end_headers()
             self.wfile.write(json.dumps(data).encode("utf-8") + b"\n")
 
         elif self.path == "/status":
             self.send_response(200)
-            self.send_header("Content-type", "text/plain")
+            self.send_header("Content-Type", "text/plain")
             self.end_headers()
             self.wfile.write(b"OK\n")
 
         else:
             self.send_response(404)
-            self.send_header("Content-type", "application/json")
+            self.send_header("Content-Type", "application/json")
             self.end_headers()
             message = {"error": "Endpoint not found"}
             self.wfile.write(json.dumps(message).encode("utf-8") + b"\n")
