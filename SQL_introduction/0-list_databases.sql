@@ -1,2 +1,2 @@
 --This function required all database
-SELECT databases FROM mysql
+SELECT databases FROM mysql;
