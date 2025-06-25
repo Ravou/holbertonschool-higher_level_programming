@@ -1,2 +1,2 @@
---This function required all database
+-- This function required all database
 SHOW DATABASES;
