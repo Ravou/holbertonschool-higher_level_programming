@@ -1,2 +1,2 @@
---This script list table
+-- This script list table
 SHOW TABLE;
