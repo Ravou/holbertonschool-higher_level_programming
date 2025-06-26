@@ -1,6 +1,6 @@
 -- This script list all row table
 SELECT
-ROW_NUMBER() OVER (First_name, Last_name, name) as first_table,
+ROW_NUMBER() OVER (id, name) + 3,
 First_name,
 Last_name,
 name
