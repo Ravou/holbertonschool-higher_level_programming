@@ -1,3 +1,3 @@
 -- This scritp print the table
-USE mydb
+USE hbtn_0c0;
 SHOW CREATE TABLE first_table\G
