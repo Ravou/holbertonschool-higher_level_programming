@@ -1,4 +1,6 @@
 -- This script list all row table
 SELECT
-ROW_NUMBER() OVER () as id ,
+ROW_NUMBER() OVER (id) ,
+id,
+name
 FROM first_table;
