@@ -1,2 +1,2 @@
 -- This scritp print the table
-SHOW TABLES FROM hbtn_0c_0;
+SHOW CREATE TABLE first_table\G
