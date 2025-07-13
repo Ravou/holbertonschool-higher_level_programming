@@ -1,0 +1,8 @@
+version: '3'
+services:
+  node-env:
+    build: .
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: bash
