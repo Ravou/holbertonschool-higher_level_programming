@@ -24,7 +24,10 @@ if __name__ == "__main__":
     cursor.execute("SELECT * FROM states ORDER BY id ASC")
 
     # Fetch all rows from the last executed statement
-    for row in cur.fetchall():
+    rows = cursor.fetchall()
+
+    # Print each row
+    for row in rows:
         print(row)
 
     # Close the database connection and cursor
